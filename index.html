@@ -1,47 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My First Webpage</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task-2 Registration Form</title>
+  <!-- Linking CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>🌐 Welcome to My Webpage</h1>
-        <p class="subtitle">Learning HTML, CSS, and JavaScript</p>
-    </header>
 
-    <main>
-        <section>
-            <h2>About This Page</h2>
-            <p>This webpage is my <strong>first web development project</strong>. 
-            It is built using <em>HTML</em> for structure, <em>CSS</em> for styling, and <em>JavaScript</em> for interactivity.</p>
-            <p>Through this project, I am practicing the basics of web development and preparing for larger, more complex projects in the future.</p>
-        </section>
+  <!-- ===== Header / Navbar ===== -->
+  <header>
+    <nav class="navbar">
+      <h1>My WebApp</h1>
+      <div>
+        <a href="#">Home</a>
+        <a href="#register">Register</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
 
-        <section>
-            <h2>Image Section</h2>
-            <p>Here is a sample image added to make the page visually appealing:</p>
-            <img src="sample-image.png" alt="Sample Image">
-        </section>
+  <!-- ===== Registration Form ===== -->
+  <main>
+    <div class="container" id="register">
+      <h2>Registration Form</h2>
+      <form id="regForm">
+        
+        <label for="fullname">Full Name:</label>
+        <input type="text" id="fullname" name="fullname">
 
-        <section>
-            <h2>Useful Link</h2>
-            <p>Visit <a href="https://www.example.com" target="_blank">Example Website</a> to explore more about web technologies and tutorials.</p>
-        </section>
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email">
 
-        <section>
-            <h2>Interactive Button</h2>
-            <p>Click the button below to see JavaScript in action:</p>
-            <button onclick="showMessage()">Click Me</button>
-        </section>
-    </main>
+        <label for="password">Set Password:</label>
+        <input type="password" id="password" name="password">
 
-    <footer>
-        <p>© 2025 My First Webpage | Built with ❤️ using HTML, CSS & JavaScript</p>
-    </footer>
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob">
 
-    <script src="script.js"></script>
+        <label>Gender:</label>
+        <div class="gender">
+          <input type="radio" id="male" name="gender" value="Male">
+          <label for="male">Male</label>
+
+          <input type="radio" id="female" name="gender" value="Female">
+          <label for="female">Female</label>
+
+          <input type="radio" id="other" name="gender" value="Other">
+          <label for="other">Other</label>
+        </div>
+
+        <div id="errorMsg" class="error"></div>
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer>
+    <p>&copy; 2025 My WebApp | Designed for Internship Task-2</p>
+  </footer>
+
+  <!-- Linking JavaScript -->
+  <script src="script.js"></script>
 </body>
 </html>
